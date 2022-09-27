@@ -1,5 +1,10 @@
 let productsArray = [];
 
+function setProID(id) {
+    localStorage.setItem("ProID", id);
+    window.location = "product-info.html"
+}
+
 function showProductsList(array){
     let htmlContentToAppend = "";
 
@@ -9,7 +14,7 @@ function showProductsList(array){
         <h1> </h1>
         <p> </p>
         <div class="list-group-item list-group-item-action">
-        <div class="row">
+        <div class="row" onclick="setProID(`+products.id+`)">
             <div class="col-3">
                 <img src="` + products.image + `" alt="product image" class="img-thumbnail">
             </div>

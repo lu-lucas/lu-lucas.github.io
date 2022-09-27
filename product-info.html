@@ -16,31 +16,67 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-between">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
+            <a class="nav-link nav-link active" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
+            <a class="nav-link nav-link active" href="categories.html">Categorías</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
+            <a class="nav-link nav-link active" href="sell.html">Vender</a>
           </li>
           <li class="nav-item">
+          
+          <div class="dropdown" id="despliegue">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="email" data-bs-toggle="dropdown" aria-expanded="false">
+              <a><span class="caret" id="email"></span></a></button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a href="cart.html">Mi carrito</a></li>
+                <li><a href="my-profile.html">Mi perfil</a></li>
+                <li class="divider"></li>
+                <li><a href="login.html">Cerrar Sesión</a></li>
+                </ul>
+                </div>
+            </li>
+            </ul>
+          </div>
           </li>
+          </div>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div class="container" id="despliegue-info">
+
       </div>
+      <div class=" p-4">
+        <div class="container" >
+          <div id="despliegue-comment">
+            <h4>Comentarios</h4>
+
+          </div>
+          <br><br>
+          <h5>Deja tu comentario</h5>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>          
+          </div>        
+          <button type="button" class="btn btn-primary my-3" id="submit">Enviar</button>
+        </div>
     </div>
   </main>
   <footer class="text-muted">

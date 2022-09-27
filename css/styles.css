@@ -9,6 +9,12 @@
   font-weight: bold;
 }
 
+nav ul li a {
+  display: block; padding: 12px 30px;
+  color: whitesmoke; text-decoration: none !important;
+}
+
+
 #fotito {
   padding-inline-start: 11.5cm;
   vertical-align: 7px;
@@ -213,6 +219,7 @@ footer p {
 main {
   min-height: calc(100vh - 210px);
 }
+
 
 a.custom-card,
 a.custom-card:hover {
