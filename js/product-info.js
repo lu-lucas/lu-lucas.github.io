@@ -1,6 +1,12 @@
 let infoArray = [];
 let comentariosArray = [];
 
+
+function setProID(id) {
+    localStorage.setItem("ProID", id);
+    window.location = "product-info.html"
+}
+
 function mostrarInfo(info) {
     let htmlContentToAppend = "";
         htmlContentToAppend += `
@@ -23,9 +29,23 @@ function mostrarInfo(info) {
         <img src="`+info.images[3]+`" style="width: 18rem; height: 10rem;" alt="" class="img-thumbnail">
         </div>
     `
-        document.getElementById("despliegue-info").innerHTML = htmlContentToAppend; 
+    document.getElementById("despliegue-info").innerHTML = htmlContentToAppend; 
+}
+function mostrarRel(array) {
+    let relacionado = "";
+    console.log(array);
+    for (let i = 0; i < array.relatedProducts.length; i++) {
+        let related= array.relatedProducts[i];
+        relacionado += `
+        <div class="container" onclick="setProID(${related.id})">
+        <img src="${related.image}" id="img-rel" style="width: 18rem; height: 10rem;" alt="product image" class="img-thumbnail">
+        <h6>${related.name}</h6>
+        </div>
+        `
     }
-
+    document.getElementById("prod-relacionados").innerHTML += relacionado;
+}
+        
     function puntaje(numero){
         let estrellitas='';
         for(let i=0; i<5; i++){
@@ -60,9 +80,10 @@ function mostrarInfo(info) {
         getJSONData(PRODUCT_INFO_URL + idInfo + '.json').then(function(resultObj){
             if (resultObj.status === "ok")
             {
-                let productsArray = resultObj.data;
-                console.log(productsArray.name);
-                mostrarInfo(productsArray);
+                let infoArray = resultObj.data;
+                console.log(infoArray.name);
+                mostrarInfo(infoArray);
+                mostrarRel(infoArray);
             }
         });
         getJSONData(PRODUCT_INFO_COMMENTS_URL + idInfo + '.json').then(function(resultObj){
