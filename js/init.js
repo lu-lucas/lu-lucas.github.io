@@ -6,6 +6,7 @@ const PRODUCT_INFO_COMMENTS_URL = "https://japceibal.github.io/emercado-api/prod
 const CART_INFO_URL = "https://japceibal.github.io/emercado-api/user_cart/";
 const CART_BUY_URL = "https://japceibal.github.io/emercado-api/cart/buy.json";
 const EXT_TYPE = ".json";
+const USUARIO_ID = 25801;
 
 document.addEventListener("DOMContentLoaded", () => {
   let email = localStorage.getItem("email");

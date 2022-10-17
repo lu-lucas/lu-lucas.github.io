@@ -51,10 +51,74 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div>
+      <p class="text-center p-4" style="font-size: 32px;">Carrito de compras</p>
+      <p class="lead" style="font-size: 28px; padding-inline-start: 100px; margin-bottom: 0px;">Artículos a comprar</p><br>
       </div>
+      <table class="table text-center table-sm table-hover">
+        <thead>
+          <tr>
+            <th></th>
+            
+            <th>Nombre</th>
+           
+            <th>Costo</th>
+      
+            <th>Cantidad</th>
+           
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="articulo_cart" class = "p-0">
+
+        </tbody> 
+      </table> 
+    </div>
+      <hr>
+          <p class="lead" style="font-size: 28px; padding-inline-start: 100px; margin-bottom: 0px;">Tipo de envío</p>
+          <div class="d-block my-3" style="padding-inline-start: 100px; margin-bottom: 0px;">
+            <div class="custom-control custom-radio">
+              <input id="goldradio" name="publicationType" type="radio" class="custom-control-input" checked=""
+                required="">
+              <label class="custom-control-label lead" for="premiumradio">Premium 2 a 5 días (15%)</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="premiumradio" name="publicationType" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label lead" for="expressradio">Express 5 a 8 días (7%)</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="standardradio" name="publicationType" type="radio" class="custom-control-input" required="">
+              <label class="custom-control-label lead" for="estandardradio">Estándar 12 a 15 días (5%)</label>
+            </div>
+          </div>
+          <hr>
+          <p class="lead" style="font-size: 28px; padding-inline-start: 100px; margin-bottom: 0px;">Dirección de Envío</p>
+          <div style="padding-inline-start: 100px; margin-top: 20px;">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="productName" class="lead">Calle</label>
+              <input type="text" class="form-control" id="calle" value="" name="productName">
+              <div class="invalid-feedback">
+                Debe ingresar una calle
+              </div>
+            </div>
+            <div class="col-md-3 mb-3">
+              <label for="productName" class="lead">Número</label>
+              <input type="number" class="form-control" id="numerocasa" value="" name="productName">
+              <div class="invalid-feedback">
+                Debe ingresar un número
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="productName" class="lead">Esquina</label>
+              <input type="text" class="form-control" id="esquina" value="" name="productName">
+              <div class="invalid-feedback">
+                Debe ingresar una esquina
+              </div>
+            </div>
+          </div>
     </div>
   </main>
   <footer class="text-muted">

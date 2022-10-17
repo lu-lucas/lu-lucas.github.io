@@ -46,6 +46,10 @@ h1, inicio {
   font-size: 1.20rem;
 }
 
+#img-carrito {
+  width: 180px;
+}
+
 .container-login {
 padding-inline-start: 15.4cm;
 }
