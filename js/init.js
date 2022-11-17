@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
+function cierroSesión() {
+  localStorage.clear();
+  location.href = "login.html";
+}
+
 let showSpinner = function(){
   document.getElementById("spinner-wrapper").style.display = "block";
 }

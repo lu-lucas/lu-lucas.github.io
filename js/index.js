@@ -20,5 +20,3 @@ document.getElementById("cerrar").addEventListener("click",()=>{
     location.href = "login.html";
 })
 
-
-
